@@ -1,4 +1,4 @@
-ID,realSum,room_type,room_shared_bool,room_private_bool,person_capacity,host_is_superhost_bool,multi,biz,cleanliness_rating,guest_satisfaction_overall,bedrooms,dist,metro_dist,City,Is_weekend_bool
+ID,realSum,room_type,room_shared_bool,room_private_bool,person_capacity,host_is_superhost_bool,multi_bool,biz_bool,cleanliness_rating,guest_satisfaction_overall,bedrooms,dist,metro_dist,City,Is_weekend_bool
 0,194.03,Private room,0,1,2,0,1,0,10,93,1,5.0,2.5,Amsterdam,0
 1,344.25,Private room,0,1,4,0,0,0,8,85,1,0.5,0.2,Amsterdam,0
 2,264.1,Private room,0,1,2,0,0,1,9,87,1,5.7,3.7,Amsterdam,0
