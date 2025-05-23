@@ -22,12 +22,6 @@ Use a locally hosted LLM (LLaMA 3) to provide insights or answer questions based
   - `pandas`
   - `ipykernel` (if running from Jupyter)
 
-You can install them with:
-
-```bash
-pip install -r requirements.txt
-```
-
 ## Install Ollama
 Follow the instructions at: https://ollama.com/download
 Or run the Docker image manually:
