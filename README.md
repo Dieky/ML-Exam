@@ -42,4 +42,4 @@ Run:
 ollama pull llama3
 ```
 
-After setting this up you should be ready to run the project
+After setting this up you should be ready to run the model in our project
