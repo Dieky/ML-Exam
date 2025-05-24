@@ -61,6 +61,61 @@ docker run -d -p 11434:11434 --name ollama ollama/ollama
 
 ---
 
+### Open Web UI in docker
+
+#### Step 1: Create a Project Folder
+
+Open your terminal and run:
+
+```powershell
+mkdir ollama-webui
+cd ollama-webui
+```
+
+#### Step 2: Create a docker-compose.yml File
+In the same Terminal window, run:
+```powershell
+notepad docker-compose.yml
+```
+Paste the following into Notepad and save it:
+```
+version: '3.8'
+
+services:
+  ollama:
+    image: ollama/ollama
+    container_name: ollama
+    volumes:
+      - ollama:/root/.ollama
+    ports:
+      - "11434:11434"
+    restart: unless-stopped
+
+  open-webui:
+    image: ghcr.io/open-webui/open-webui:main
+    container_name: open-webui
+    ports:
+      - "3001:8080"
+    environment:
+      - OLLAMA_BASE_URL=http://ollama:11434
+    depends_on:
+      - ollama
+    restart: unless-stopped
+
+volumes:
+  ollama:
+
+```
+#### Step 3: Start Both Containers
+
+```powershell
+docker compose up -d
+```
+
+#### Step 4: Access the Interface
+Open your browser and go to: http://localhost:3001
+
+
 ## Download the LLaMA 3 Model
 
 Once Ollama is running, pull the model:
