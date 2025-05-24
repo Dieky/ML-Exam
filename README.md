@@ -155,7 +155,8 @@ These demonstrate:
 
 ## Project Structure Overview
 
-- `/airbnb-prices-in-european-cities/`: Raw city pricing data
 - `/Data/`: Cleaned, clustered, and labeled datasets
+- `/Data/airbnb-prices-in-european-cities/`: Raw city pricing data
+- 
 - `*.ipynb`: Project notebooks (ML models, Ollama API use)
 - `README.md`: Setup and instructions
