@@ -157,6 +157,6 @@ These demonstrate:
 
 - `/Data/`: Cleaned, clustered, and labeled datasets
 - `/Data/airbnb-prices-in-european-cities/`: Raw city pricing data
-- 
-- `*.ipynb`: Project notebooks (ML models, Ollama API use)
+- `/ML/`: ML model notebooks
+- `/AI/`: Ollama Api notebooks
 - `README.md`: Setup and instructions
