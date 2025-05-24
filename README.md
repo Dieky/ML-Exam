@@ -1,39 +1,106 @@
-# Part 1 
+# Airbnb Price Analysis with Local AI (Part 1 & 2)
 
+This project is our final exam solution for the Machine Learning & AI course. It consists of two parts:
 
-# Part 2 - Local AI Analysis with LLaMA 3 (via Ollama)
+- **Part 1**: Traditional Machine Learning (Unsupervised & Supervised)
+- **Part 2**: Integrating Local AI via **Ollama** and **LLaMA 3** for natural language interaction with our dataset
 
-This project builds on the Airbnb data analysis from Part 1 by integrating a local large language model (LLM) using **Ollama** and **LLaMA 3**. The goal is to enable natural language interaction with the dataset using an AI model running locally or locally via Docker.
+Part 2 builds directly on the results and data preparation from Part 1.
+
+---
 
 ## Objective
 
-Use a locally hosted LLM (LLaMA 3) to provide insights or answer questions based on the cleaned Airbnb dataset. The model is hosted using **Ollama** in **Docker Desktop**, enabling offline and private AI interaction.
+- Perform unsupervised (KMeans) and supervised (Linear Regression) learning on Airbnb pricing data across European cities.
+- Enable natural language insights via a **locally hosted LLaMA 3 model** using **Ollama**.
+- Showcase the difference between traditional ML and AI-assisted analysis using a local LLM.
 
 ---
 
 ## Requirements
 
+### Software
 - **Operating System**: Windows 10/11 or macOS
-- **Docker Desktop**: Version **4.30.0** or later (Unless running Ollama locally on your computer)  
-  [Download here](https://www.docker.com/products/docker-desktop/)
-- **Python**: Version 3.9+
-- **Python packages**:
-  - `requests`
-  - `pandas`
-  - `ipykernel` (if running from Jupyter)
+- **Python**: 3.9+
+- **Docker Desktop**: Version 4.30.0 or newer *(unless installing Ollama natively)*
 
-## Install Ollama
-Follow the instructions at: https://ollama.com/download
-Or run the Docker image manually:
+### Python Packages
+Install required packages:
+```bash
+pip install requests pandas ipykernel
 ```
+
+---
+
+## Set Up Ollama (Two Options)
+
+### Option 1: Native Install
+1. Download Ollama from [https://ollama.com/download](https://ollama.com/download)
+2. Install it on your local system (Windows/macOS)
+
+### Option 2: Run via Docker
+To run Ollama in a container, you need Docker Desktop:
+
+1. Download Docker Desktop from the official site: https://www.docker.com/products/docker-desktop
+2. Use version 4.30.0 or later to ensure compatibility with the latest Ollama images.
+
+You can check your Docker version with:
+
+```bash
+docker --version
+```
+3. Follow the installation guide for your operating system (Windows/macOS) provided on Docker's website.
+4. After installation, make sure Docker is running in the background before starting Ollama.
+
+```bash
 docker pull ollama/ollama
 docker run -d -p 11434:11434 --name ollama ollama/ollama
 ```
 
-## Download the LLaMA 3 model
-Run:
-```
+> This starts the Ollama API server at `http://localhost:11434`
+
+---
+
+## Download the LLaMA 3 Model
+
+Once Ollama is running, pull the model:
+```bash
 ollama pull llama3
 ```
 
-After setting this up you should be ready to run the model in our project
+---
+
+## How to Run the Project
+
+Run the notebooks in this order:
+
+1. **Data preparation & ML**
+   - `Data_handling.ipynb`
+   - `UserInput.ipynb`
+   - `KMeans.ipynb`
+   - `Linear regression.ipynb`
+
+2. **AI Interaction via LLaMA 3**
+   - `Ollama_Unsupervised_API.ipynb`
+   - `Supervised_Linear_Regression_llama_API.ipynb`
+
+These demonstrate:
+- Traditional clustering & prediction
+- AI-powered data explanation via local LLM
+
+---
+
+## Notes
+
+- All AI interactions occur **locally** via `http://localhost:11434`
+- The project works fully **offline** after setup
+- Use Docker if you don't want to install Ollama directly
+
+---
+
+## Project Structure Overview
+
+- `/airbnb-prices-in-european-cities/`: Raw city pricing data
+- `/Data/`: Cleaned, clustered, and labeled datasets
+- `*.ipynb`: Project notebooks (ML models, Ollama API use)
+- `README.md`: Setup and instructions
