@@ -1,23 +1,36 @@
-# Airbnb Price Analysis with Local AI (Part 1 & 2)
+# Machine learning and AI exam project
 
-This project is our final exam solution for the Machine Learning & AI course. It consists of two parts:
+In this project we wanted to solve two problems. 
 
-- **Part 1**: Traditional Machine Learning (Unsupervised & Supervised)
-- **Part 2**: Integrating Local AI via **Ollama** and **LLaMA 3** for natural language interaction with our dataset
+- Estimating the price of a new listing to AirBNB
+- Provide recommendations to customers based on preferences such as budget, amount of days, bedrooms etc.
 
-Part 2 builds directly on the results and data preparation from Part 1.
+The project is split into 2 parts. Machine learning and AI.
 
----
+With machine learning we create models that can solve these 2 problems. 
 
-## Objective
+With AI we are going to let the AI model "Llama3" solve these 2 problems.
 
-- Perform unsupervised (KMeans) and supervised (Linear Regression) learning on Airbnb pricing data across European cities.
-- Enable natural language insights via a **locally hosted LLaMA 3 model** using **Ollama**.
-- Showcase the difference between traditional ML and AI-assisted analysis using a local LLM.
+We will then compare the results from our machine learning models and the AI solutions.
 
----
+The data used to make our models is based on the dataset found [here](https://www.kaggle.com/datasets/thedevastator/airbnb-prices-in-european-cities). We will combine data from all cities into a single file. Then prepare the data to fit our needs depending on the problem. See the [data folder](./data/) for raw data and modified data
 
-## Requirements
+## Machine learning
+We are going to use supervised learning (linear regression) to predict the price and unsupervised learning for recommendations (Kmeans).
+
+[Predicting prices with linear regression](./ML/Linear%20regression.ipynb)
+
+[Recommendations with Kmeans](./ML/KMeans.ipynb)
+
+## AI
+In this section we will try 2 approaches. One where we do not assist the AI and one where we do. The assistance will be done with **RAG** (retrieval-augmented generation)
+
+[Predicting prices with AI](./AI/Supervised_Linear_Regression_llama_API.ipynb)
+
+[Recommendations with AI](./AI/Ollama_Unsurpervised_API.ipynb)
+
+
+## Requirements to use local AI
 
 ### Software
 - **Operating System**: Windows 10/11 or macOS
