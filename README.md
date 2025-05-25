@@ -20,7 +20,9 @@ We are going to use supervised learning (linear regression) to predict the price
 
 [Predicting prices with linear regression](./ML/Linear%20regression.ipynb)
 
-[Recommendations with Kmeans](./ML/KMeans.ipynb)
+[Clusters with Kmeans](./ML/KMeans.ipynb)
+
+[Recommendations from user input](./ML/UserInput.ipynb)
 
 ## AI
 In this section we will try 2 approaches. One where we do not assist the AI and one where we do. The assistance will be done with **RAG** (retrieval-augmented generation)
@@ -30,7 +32,8 @@ In this section we will try 2 approaches. One where we do not assist the AI and 
 [Recommendations with AI](./AI/Ollama_Unsurpervised_API.ipynb)
 
 
-## Requirements to use local AI
+
+## Requirements and guide to set up local AI
 
 ### Software
 - **Operating System**: Windows 10/11 or macOS
