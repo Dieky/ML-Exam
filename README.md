@@ -176,3 +176,13 @@ These demonstrate:
 - `/ML/`: ML model notebooks
 - `/AI/`: Ollama Api notebooks
 - `README.md`: Setup and instructions
+
+---
+
+## Technologies used
+- Anaconda Notebook
+- Docker
+- Open WebUI
+- Ollama
+- ChatGPT
+- GitKraken
