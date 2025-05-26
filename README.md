@@ -24,8 +24,10 @@ We are going to use supervised learning (linear regression) to predict the price
 
 [Recommendations from user input](./ML/UserInput.ipynb)
 
+[Comparative analysis](./Comparative%20analysis.pdf)
+
 ## AI
-In this section we will try 2 approaches. One where we do not assist the AI and one where we do. The assistance will be done with **RAG** (retrieval-augmented generation)
+In this section we will try 2 approaches. One where we do not assist the AI and one where we do. The assistance will be done with **RAG** (retrieval-augmented generation). We will then make a comparative analysis.
 
 [Predicting prices with AI](./AI/Supervised_Linear_Regression_llama_API.ipynb)
 
